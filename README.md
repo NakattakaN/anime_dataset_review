@@ -1,6 +1,6 @@
 # anime_dataset_review
 
-# How many reddit mentions does a anime have by its rating and popularity?
+# How much popularity does a anime have by its rating and popularity?
 **DSA210 – Introduction to Data Science**  
 **Fall 2025 Term Project**
 
@@ -10,22 +10,22 @@
 
 This project explores what makes certain anime popular — and how factors like genre, studio, source material, and season of release affect audience ratings and engagement.  
 
-Using datasets from **MyAnimeList (MAL)** and **AniList**, along with external data like **Reddit mentions** and my own personal anilist data to understand a users general behaviours.
+Using datasets from **MyAnimeList (MAL)** and **AniList** and my own personal anilist data to understand a users general behaviours.
 
 The goal is to find meaningful connections between an anime’s features and its success, as well as to see how online attention and release timing influence ratings. 
 
-The latter transformator implementation will use ROBERTA and will try to guess the reddit rate considering MAL and ANILIST ratings.
+The latter transformator implementation will use ROBERTA and will try to guess the popularity considering MAL and ANILIST ratings.
 
 ---
 
 ## Motivation  
 
-This projects motivation is to understand the correlation beetwen animes popularity and reddit mentions.
+This projects motivation is to understand the correlation beetwen animes popularity and rating.
 
 This project looks into questions like:  
 - Do specific genres perform better in certain decades or seasons?  
 - How do **studios** and **source materials** (manga, novel, game, original) impact ratings?  
-- Is there a link between **online hype** (Reddit posts, Google searches) and **user ratings**?  
+- Is there a link between **online hype** and **user ratings**?  
 - Can we predict an anime’s success from its metadata alone?  
 
 By analyzing these aspects, we can better understand audience behavior and cultural trends within anime communities.
@@ -37,7 +37,7 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 - Analyze **anime trends** over time by decade, genre, and studio.  
 - Identify which factors most affect **ratings and popularity**.  
 - Explore **seasonal release trends** (Winter, Spring, Summer, Fall).  
-- Compare **online attention** (Reddit & Google Trends) with viewer scores.  
+- Compare **online attention** with viewer scores.  
 - Build simple **predictive models** for anime popularity.  
 - Visualize data to show changes in the anime industry over time.
 
@@ -49,7 +49,7 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 |---|------------|---------|--------------|----------------|
 | 1 | Anime Metadata | [MyAnimeList Dataset (Kaggle)](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset) | Core anime data: title, genre, studio, rating, popularity, members | 1950–2024 |
 | 2 | Anime Metadata | [AniList API](https://anilist.gitbook.io/anilist-apiv2-docs/) | Used for updating newer anime (2024–2025) | 2024–2025 |
-| 3 | Reddit Mentions | [Pushshift Reddit Data](https://pushshift.io/) | Mentions of anime titles on Reddit | 2015–2025 |
+| 3 | Anime dataset | [A combined metadata] (https://github.com/manami-project/anime-offline-database) | Combined metadata | 1950 -2025 |
 | 4 | My own data | My own anilist data i am going to upload | 2019 - 2025|
 
 ---
@@ -57,7 +57,7 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 ## Methodology  
 
 ### 1. Data Cleaning & Preprocessing  
-- Merge multiple sources (MAL, AniList, Reddit, Google Trends).  
+- Merge multiple sources of datasets.  
 - Remove duplicates, standardized names, and fixed missing data.  
 - Encode categorical variables (genres, studios, sources).  
 - Converte airing dates into `year` and `season`.  
