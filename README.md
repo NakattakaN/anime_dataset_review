@@ -51,6 +51,7 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 | 2 | Anime Metadata | [AniList API](https://anilist.gitbook.io/anilist-apiv2-docs/) | Used for updating newer anime (2024–2025) | 2024–2025 |
 | 3 | Anime dataset | [A combined metadata] (https://github.com/manami-project/anime-offline-database) | Combined metadata | 1950 -2025 |
 | 4 | My own data | My own anilist data i am going to upload | 2019 - 2025|
+| 5 | Anime Dataset | [A combined data for the popularity rankings] https://www.kaggle.com/datasets/calebmwelsh/anilist-anime-dataset | This is probaby the most important one | 1950-2023|
 
 ---
 
