@@ -61,23 +61,30 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 - Merge multiple sources of datasets.  
 - Remove duplicates, standardized names, and fixed missing data.  
 - Encode categorical variables (genres, studios, sources).  
-- Converte airing dates into `year` and `season`.  
+- Converte airing dates into `year` and `season`.
+- You can find these in test.py
 
 ### 2. Exploratory Data Analysis (EDA)  
 - Summary stats for ratings, members, favorites, and episode counts.  
 - Visualize genre distributions and correlations.  
-- Examine release trends across seasons and decades.  
+- Examine release trends across seasons and decades.
+- You can find these in test.py
 
 ### 3. Statistical Analysis  
 - Correlation and regression analysis for rating vs. features.  
-- ANOVA tests for genre or studio differences.  
-- Seasonal trend analysis for release and popularity data.  
+- ANOVA tests for time(season) or Original.  
+- Seasonal trend analysis for release and popularity data.
+- You can find these in test.py
 
 ### 4. Machine Learning Models (optional)  
 - Regression models (Linear, Random Forest) to predict popularity score.  
 - Classification (e.g., “Hit” vs “Non-Hit” anime).  
 - Feature importance visualization.
 
+### 5. Recomendation engine
+- Although my initial purpose was to make a hit-vs-nonhit anime with a roberta model i decided to add another model of a recomendation engine
+- The roberta model will still be implemented this is just extra
+- You can find it in recom.py
 
 
 ## 💻 Technical Details  
