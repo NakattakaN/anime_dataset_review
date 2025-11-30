@@ -84,7 +84,8 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 ### 5. Recomendation engine
 - Although my initial purpose was to make a hit-vs-nonhit anime with a roberta model i decided to add another model of a recomendation engine
 - The roberta model will still be implemented this is just extra
-- You can find it in recom.py
+- This will have some ml algorithms you can find the corresponding algorith in the corresponding jupiter notebook
+- They are named as recom_[alg-name].py
 
 
 ## 💻 Technical Details  
