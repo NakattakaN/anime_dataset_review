@@ -1,6 +1,6 @@
 # anime_dataset_review
 
-# How much popularity does a anime have by its rating and popularity?
+# DSA210 ANİME DATA ANALYSYS
 **DSA210 – Introduction to Data Science**  
 **Fall 2025 Term Project**
 
