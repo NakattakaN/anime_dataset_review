@@ -58,18 +58,18 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 ## Methodology  
 
 ### 1. Data Cleaning & Preprocessing  
--ID-Based Linking: Instead of unreliable string matching (names), I use the MyAnimeList ID (mal_id) as the primary key.
--The Join: I perform an Inner Join between my personal dataset and the Global AniList dataset: df_user['mal_id'] ↔ df_global['idMal']
--This creates a merged dataset containing only the anime I have watched, allowing me to calculate a "Score Divergence" (My Score - Global Score) for every entry.
+- ID-Based Linking: Instead of unreliable string matching (names), I use the MyAnimeList ID (mal_id) as the primary key.
+- The Join: I perform an Inner Join between my personal dataset and the Global AniList dataset: df_user['mal_id'] ↔ df_global['idMal']
+- This creates a merged dataset containing only the anime I have watched, allowing me to calculate a "Score Divergence" (My Score - Global Score) for every entry.
 - You can find these in test.py
 - XML Conversion: Since the personal data comes in a raw XML format, I implemented a custom parser (xml.etree.ElementTree) to extract the my_score, my_status, and mal_id fields into a structured CSV format (user_animelist_normalized.csv).
 -Binning: For the global analysis, I categorized anime into score tiers (e.g., <4, 4-5, 8-9, 9-10) to visualize the density of anime quality versus popularity.
 - You can find these in test.py
 
 ### 2. Exploratory Data Analysis (EDA)  
--Correlation Analysis: I calculated the Pearson correlation coefficient (found to be ≈0.42) to quantify the relationship between an anime’s Rating and its Popularity.
--Outlier Detection: I implemented logic to identify "Hidden Gems" (anime with High Ratings >85 but Low Popularity < Median) and "Overhyped" shows.
--Bias Distribution: I plotted the distribution of my personal rating deviations to see if I am generally a "Hater" (negative deviation) or a "Fanboy" (positive deviation) compared to the global average.
+- Correlation Analysis: I calculated the Pearson correlation coefficient (found to be ≈0.42) to quantify the relationship between an anime’s Rating and its Popularity.
+- Outlier Detection: I implemented logic to identify "Hidden Gems" (anime with High Ratings >85 but Low Popularity < Median) and "Overhyped" shows.
+- Bias Distribution: I plotted the distribution of my personal rating deviations to see if I am generally a "Hater" (negative deviation) or a "Fanboy" (positive deviation) compared to the global average.
 - You can find these in test.py
 
 ### 3. Statistical Analysis  
