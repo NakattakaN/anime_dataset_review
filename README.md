@@ -58,32 +58,27 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 ## Methodology  
 
 ### 1. Data Cleaning & Preprocessing  
-- Merge multiple sources of datasets.  
-- Remove duplicates, standardized names, and fixed missing data.  
-- Encode categorical variables (genres, studios, sources).  
-- Converte airing dates into `year` and `season`.
+-ID-Based Linking: Instead of unreliable string matching (names), I use the MyAnimeList ID (mal_id) as the primary key.
+-The Join: I perform an Inner Join between my personal dataset and the Global AniList dataset: df_user['mal_id'] ↔ df_global['idMal']
+-This creates a merged dataset containing only the anime I have watched, allowing me to calculate a "Score Divergence" (My Score - Global Score) for every entry.
+- You can find these in test.py
+- XML Conversion: Since the personal data comes in a raw XML format, I implemented a custom parser (xml.etree.ElementTree) to extract the my_score, my_status, and mal_id fields into a structured CSV format (user_animelist_normalized.csv).
+-Binning: For the global analysis, I categorized anime into score tiers (e.g., <4, 4-5, 8-9, 9-10) to visualize the density of anime quality versus popularity.
 - You can find these in test.py
 
 ### 2. Exploratory Data Analysis (EDA)  
-- Summary stats for ratings, members, favorites, and episode counts.  
-- Visualize genre distributions and correlations.  
-- Examine release trends across seasons and decades.
+-Correlation Analysis: I calculated the Pearson correlation coefficient (found to be ≈0.42) to quantify the relationship between an anime’s Rating and its Popularity.
+-Outlier Detection: I implemented logic to identify "Hidden Gems" (anime with High Ratings >85 but Low Popularity < Median) and "Overhyped" shows.
+-Bias Distribution: I plotted the distribution of my personal rating deviations to see if I am generally a "Hater" (negative deviation) or a "Fanboy" (positive deviation) compared to the global average.
 - You can find these in test.py
 
 ### 3. Statistical Analysis  
-- Correlation and regression analysis for rating vs. features.  
-- ANOVA tests for time(season) or Original.  
-- Seasonal trend analysis for release and popularity data.
+-T-Test (Source Material): I compared the mean popularity of "Manga Adaptations" vs. "Original Anime." Result: Significant difference (p<0.05), proving Manga adaptations generally have higher pre-existing fanbases.
+-One-Way ANOVA (Seasonality): I tested if the release season (Winter, Spring, Summer, Fall) has a statistically significant impact on the final score. Result: The release window does affect the critical reception of an anime (p≈0.01).
 - You can find these in test.py
-
-### 4. Machine Learning Models (optional)  
-- Regression models (Linear, Random Forest) to predict popularity score.  
-- Classification (e.g., “Hit” vs “Non-Hit” anime).  
-- Feature importance visualization.
 
 ### 5. Recomendation engine
 - Although my initial purpose was to make a hit-vs-nonhit anime with a roberta model i decided to add another model of a recomendation engine
-- The roberta model will still be implemented this is just extra
 - This will have some ml algorithms you can find the corresponding algorith in the corresponding jupiter notebook
 - They are named as recom_[alg-name].py
 
