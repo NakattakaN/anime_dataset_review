@@ -73,7 +73,7 @@ By analyzing these aspects, we can better understand audience behavior and cultu
 - You can find these in test.py
 
 ### 3. Statistical Analysis  
--T-Test (Source Material): I compared the mean popularity of "Manga Adaptations" vs. "Original Anime." Result: Significant difference (p<0.05), proving Manga adaptations generally have higher pre-existing fanbases.
+- T-Test (Source Material): I compared the mean popularity of "Manga Adaptations" vs. "Original Anime." Result: Significant difference (p<0.05), proving Manga adaptations generally have higher pre-existing fanbases.
 -One-Way ANOVA (Seasonality): I tested if the release season (Winter, Spring, Summer, Fall) has a statistically significant impact on the final score. Result: The release window does affect the critical reception of an anime (p≈0.01).
 - You can find these in test.py
 
